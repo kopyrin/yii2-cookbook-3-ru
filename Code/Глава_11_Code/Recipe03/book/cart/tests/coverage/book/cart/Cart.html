@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Language" content="en" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Cart : code coverage of book\cart\Cart</title>
+		<link rel="stylesheet" media="screen" type="text/css" href="../../screen.css" title="Screen" />
+	</head>
+	<body>
+		<div id="header">
+			<h1>Code coverage of <a href="../../index.html">Cart</a>: book\cart\Cart</h1>
+			<h2>Class code coverage <span>87.5%</span></h2>
+		</div>
+		<div id="page">
+			<div id="content">
+				<h3>Methods</h3>
+				<ul class="summary">
+					
+						
+							<li>
+								
+								
+									<div class="bar">
+										<div class="background"></div>
+										<div class="graph" style="width: 0%"></div>
+										<div class="label">
+											<span class="percent">0%</span>
+											<a href="#setStorage">setStorage</a>
+										</div>
+									</div>
+								
+							</li>
+						
+							<li>
+								
+								
+									<div class="bar">
+										<div class="background"></div>
+										<div class="graph" style="width: 100%"></div>
+										<div class="label">
+											<span class="percent">100%</span>
+											<a href="#add">add</a>
+										</div>
+									</div>
+								
+							</li>
+						
+							<li>
+								
+								
+									<div class="bar">
+										<div class="background"></div>
+										<div class="graph" style="width: 100%"></div>
+										<div class="label">
+											<span class="percent">100%</span>
+											<a href="#set">set</a>
+										</div>
+									</div>
+								
+							</li>
+						
+							<li>
+								
+								
+									<div class="bar">
+										<div class="background"></div>
+										<div class="graph" style="width: 100%"></div>
+										<div class="label">
+											<span class="percent">100%</span>
+											<a href="#remove">remove</a>
+										</div>
+									</div>
+								
+							</li>
+						
+							<li>
+								
+								
+									<div class="bar">
+										<div class="background"></div>
+										<div class="graph" style="width: 100%"></div>
+										<div class="label">
+											<span class="percent">100%</span>
+											<a href="#clear">clear</a>
+										</div>
+									</div>
+								
+							</li>
+						
+							<li>
+								
+								
+									<div class="bar">
+										<div class="background"></div>
+										<div class="graph" style="width: 100%"></div>
+										<div class="label">
+											<span class="percent">100%</span>
+											<a href="#getItems">getItems</a>
+										</div>
+									</div>
+								
+							</li>
+						
+							<li>
+								
+								
+									<div class="bar">
+										<div class="background"></div>
+										<div class="graph" style="width: 100%"></div>
+										<div class="label">
+											<span class="percent">100%</span>
+											<a href="#getCount">getCount</a>
+										</div>
+									</div>
+								
+							</li>
+						
+							<li>
+								
+								
+									<div class="bar">
+										<div class="background"></div>
+										<div class="graph" style="width: 100%"></div>
+										<div class="label">
+											<span class="percent">100%</span>
+											<a href="#getAmount">getAmount</a>
+										</div>
+									</div>
+								
+							</li>
+						
+							<li>
+								
+								
+									<div class="bar">
+										<div class="background"></div>
+										<div class="graph" style="width: 100%"></div>
+										<div class="label">
+											<span class="percent">100%</span>
+											<a href="#loadItems">loadItems</a>
+										</div>
+									</div>
+								
+							</li>
+						
+							<li>
+								
+								
+									<div class="bar">
+										<div class="background"></div>
+										<div class="graph" style="width: 100%"></div>
+										<div class="label">
+											<span class="percent">100%</span>
+											<a href="#saveItems">saveItems</a>
+										</div>
+									</div>
+								
+							</li>
+						
+					
+				</ul>
+				<h3>Source</h3>
+				<table cellpadding="0" cellspacing="0" class="source">
+					<tr><th class="number">Line</th><th>Code</th></tr>
+					<tr><td class="number">1</td><td><pre>&lt;?php
+</pre></td></tr><tr><td class="number">2</td><td><pre>
+</pre></td></tr><tr><td class="number">3</td><td><pre>namespace book\cart;
+</pre></td></tr><tr><td class="number">4</td><td><pre>
+</pre></td></tr><tr><td class="number">5</td><td><pre>use book\cart\storage\StorageInterface;
+</pre></td></tr><tr><td class="number">6</td><td><pre>use yii\base\Component;
+</pre></td></tr><tr><td class="number">7</td><td><pre>use yii\base\InvalidConfigException;
+</pre></td></tr><tr><td class="number">8</td><td><pre>
+</pre></td></tr><tr><td class="number">9</td><td><pre>class Cart extends Component
+</pre></td></tr><tr><td class="number">10</td><td><pre>{
+</pre></td></tr><tr><td class="number">11</td><td><pre>    /**
+</pre></td></tr><tr><td class="number">12</td><td><pre>     * @var StorageInterface
+</pre></td></tr><tr><td class="number">13</td><td><pre>     */
+</pre></td></tr><tr><td class="number">14</td><td><pre>    private $_storage;
+</pre></td></tr><tr><td class="number">15</td><td><pre>    /**
+</pre></td></tr><tr><td class="number">16</td><td><pre>     * @var array
+</pre></td></tr><tr><td class="number">17</td><td><pre>     */
+</pre></td></tr><tr><td class="number">18</td><td><pre>    private $_items;
+</pre></td></tr><tr><td class="number">19</td><td><pre>
+</pre></td></tr><tr><td class="number"><a name="setStorage"></a>20</td><td><pre>    public function setStorage($storage)
+</pre></td></tr><tr><td class="number"><a name="setStorage"></a>21</td><td><pre>    {
+</pre></td></tr><tr class="notCovered"><td class="number">22</td><td><pre>        if (is_array($storage)) {
+</pre></td></tr><tr class="notCovered"><td class="number">23</td><td><pre>            $this-&gt;_storage = \Yii::createObject($storage);
+</pre></td></tr><tr class="notCovered"><td class="number">24</td><td><pre>        } else {
+</pre></td></tr><tr class="notCovered"><td class="number">25</td><td><pre>            $this-&gt;_storage = $storage;
+</pre></td></tr><tr><td class="number"><a name="setStorage"></a>26</td><td><pre>        }
+</pre></td></tr><tr class="notCovered"><td class="number">27</td><td><pre>    }
+</pre></td></tr><tr><td class="number"><a name="setStorage"></a>28</td><td><pre>
+</pre></td></tr><tr><td class="number"><a name="add"></a>29</td><td><pre>    public function add($id, $amount = 1)
+</pre></td></tr><tr><td class="number"><a name="add"></a>30</td><td><pre>    {
+</pre></td></tr><tr class="covered"><td class="number">31</td><td><pre>        $this-&gt;loadItems();
+</pre></td></tr><tr class="covered"><td class="number">32</td><td><pre>        if (isset($this-&gt;_items[$id])) {
+</pre></td></tr><tr class="covered"><td class="number">33</td><td><pre>            $this-&gt;_items[$id] += $amount;
+</pre></td></tr><tr class="covered"><td class="number">34</td><td><pre>        } else {
+</pre></td></tr><tr class="covered"><td class="number">35</td><td><pre>            $this-&gt;_items[$id] = $amount;
+</pre></td></tr><tr><td class="number"><a name="add"></a>36</td><td><pre>        }
+</pre></td></tr><tr class="covered"><td class="number">37</td><td><pre>        $this-&gt;saveItems();
+</pre></td></tr><tr class="covered"><td class="number">38</td><td><pre>    }
+</pre></td></tr><tr><td class="number"><a name="add"></a>39</td><td><pre>
+</pre></td></tr><tr><td class="number"><a name="set"></a>40</td><td><pre>    public function set($id, $amount)
+</pre></td></tr><tr><td class="number"><a name="set"></a>41</td><td><pre>    {
+</pre></td></tr><tr class="covered"><td class="number">42</td><td><pre>        $this-&gt;loadItems();
+</pre></td></tr><tr class="covered"><td class="number">43</td><td><pre>        $this-&gt;_items[$id] = $amount;
+</pre></td></tr><tr class="covered"><td class="number">44</td><td><pre>        $this-&gt;saveItems();
+</pre></td></tr><tr class="covered"><td class="number">45</td><td><pre>    }
+</pre></td></tr><tr><td class="number"><a name="set"></a>46</td><td><pre>
+</pre></td></tr><tr><td class="number"><a name="remove"></a>47</td><td><pre>    public function remove($id)
+</pre></td></tr><tr><td class="number"><a name="remove"></a>48</td><td><pre>    {
+</pre></td></tr><tr class="covered"><td class="number">49</td><td><pre>        $this-&gt;loadItems();
+</pre></td></tr><tr class="covered"><td class="number">50</td><td><pre>        if (isset($this-&gt;_items[$id])) {
+</pre></td></tr><tr class="covered"><td class="number">51</td><td><pre>            unset($this-&gt;_items[$id]);
+</pre></td></tr><tr class="covered"><td class="number">52</td><td><pre>        }
+</pre></td></tr><tr class="covered"><td class="number">53</td><td><pre>        $this-&gt;saveItems();
+</pre></td></tr><tr class="covered"><td class="number">54</td><td><pre>    }
+</pre></td></tr><tr><td class="number"><a name="remove"></a>55</td><td><pre>
+</pre></td></tr><tr><td class="number"><a name="clear"></a>56</td><td><pre>    public function clear()
+</pre></td></tr><tr><td class="number"><a name="clear"></a>57</td><td><pre>    {
+</pre></td></tr><tr class="covered"><td class="number">58</td><td><pre>        $this-&gt;loadItems();
+</pre></td></tr><tr class="covered"><td class="number">59</td><td><pre>        $this-&gt;_items = [];
+</pre></td></tr><tr class="covered"><td class="number">60</td><td><pre>        $this-&gt;saveItems();
+</pre></td></tr><tr class="covered"><td class="number">61</td><td><pre>    }
+</pre></td></tr><tr><td class="number"><a name="clear"></a>62</td><td><pre>
+</pre></td></tr><tr><td class="number"><a name="getItems"></a>63</td><td><pre>    public function getItems()
+</pre></td></tr><tr><td class="number"><a name="getItems"></a>64</td><td><pre>    {
+</pre></td></tr><tr class="covered"><td class="number">65</td><td><pre>        $this-&gt;loadItems();
+</pre></td></tr><tr class="covered"><td class="number">66</td><td><pre>        return $this-&gt;_items;
+</pre></td></tr><tr><td class="number"><a name="getItems"></a>67</td><td><pre>    }
+</pre></td></tr><tr><td class="number"><a name="getItems"></a>68</td><td><pre>
+</pre></td></tr><tr><td class="number"><a name="getCount"></a>69</td><td><pre>    public function getCount()
+</pre></td></tr><tr><td class="number"><a name="getCount"></a>70</td><td><pre>    {
+</pre></td></tr><tr class="covered"><td class="number">71</td><td><pre>        $this-&gt;loadItems();
+</pre></td></tr><tr class="covered"><td class="number">72</td><td><pre>        return count($this-&gt;_items);
+</pre></td></tr><tr><td class="number"><a name="getCount"></a>73</td><td><pre>    }
+</pre></td></tr><tr><td class="number"><a name="getCount"></a>74</td><td><pre>
+</pre></td></tr><tr><td class="number"><a name="getAmount"></a>75</td><td><pre>    public function getAmount()
+</pre></td></tr><tr><td class="number"><a name="getAmount"></a>76</td><td><pre>    {
+</pre></td></tr><tr class="covered"><td class="number">77</td><td><pre>        $this-&gt;loadItems();
+</pre></td></tr><tr class="covered"><td class="number">78</td><td><pre>        return array_sum($this-&gt;_items);
+</pre></td></tr><tr><td class="number"><a name="getAmount"></a>79</td><td><pre>    }
+</pre></td></tr><tr><td class="number"><a name="getAmount"></a>80</td><td><pre>
+</pre></td></tr><tr><td class="number"><a name="loadItems"></a>81</td><td><pre>    private function loadItems()
+</pre></td></tr><tr><td class="number"><a name="loadItems"></a>82</td><td><pre>    {
+</pre></td></tr><tr class="covered"><td class="number">83</td><td><pre>        if ($this-&gt;_storage === null) {
+</pre></td></tr><tr class="covered"><td class="number">84</td><td><pre>            throw new InvalidConfigException(&#039;Storage must be set&#039;);
+</pre></td></tr><tr><td class="number"><a name="loadItems"></a>85</td><td><pre>        }
+</pre></td></tr><tr class="covered"><td class="number">86</td><td><pre>        if ($this-&gt;_items === null) {
+</pre></td></tr><tr class="covered"><td class="number">87</td><td><pre>            $this-&gt;_items = $this-&gt;_storage-&gt;load();
+</pre></td></tr><tr class="covered"><td class="number">88</td><td><pre>        }
+</pre></td></tr><tr class="covered"><td class="number">89</td><td><pre>    }
+</pre></td></tr><tr><td class="number"><a name="loadItems"></a>90</td><td><pre>
+</pre></td></tr><tr><td class="number"><a name="saveItems"></a>91</td><td><pre>    private function saveItems()
+</pre></td></tr><tr><td class="number"><a name="saveItems"></a>92</td><td><pre>    {
+</pre></td></tr><tr class="covered"><td class="number">93</td><td><pre>         $this-&gt;_storage-&gt;save($this-&gt;_items);
+</pre></td></tr><tr class="covered"><td class="number">94</td><td><pre>    }
+</pre></td></tr><tr><td class="number"><a name="saveItems"></a>95</td><td><pre>}</pre></td></tr>
+				</table>
+			</div>
+		</div>
+		<div id="footer">
+			<p>Code coverage report powered by <a href="http://atoum.org">atoum</a></p>
+		</div>
+	</body>
+</html>

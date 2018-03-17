@@ -1,0 +1,22 @@
+{
+    "name": "book/cart",
+    "type": "yii2-extension",
+    "require": {
+        "yiisoft/yii2": "~2.0"
+    },
+    "require-dev": {
+        "atoum/atoum": "^2.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "book\\cart\\": "src/",
+            "book\\cart\\tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    }
+}

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Language" content="en" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Cart : code coverage of yii\base\Object</title>
+		<link rel="stylesheet" media="screen" type="text/css" href="../../screen.css" title="Screen" />
+	</head>
+	<body>
+		<div id="header">
+			<h1>Code coverage of <a href="../../index.html">Cart</a>: yii\base\Object</h1>
+			<h2>Class code coverage <span>57.14%</span></h2>
+		</div>
+		<div id="page">
+			<div id="content">
+				<h3>Methods</h3>
+				<ul class="summary">
+					
+						
+							<li>
+								
+								
+									<div class="bar">
+										<div class="background"></div>
+										<div class="graph" style="width: 0%"></div>
+										<div class="label">
+											<span class="percent">0%</span>
+											<a href="#className">className</a>
+										</div>
+									</div>
+								
+							</li>
+						
+							<li>
+								
+								
+									<div class="bar">
+										<div class="background"></div>
+										<div class="graph" style="width: 60%"></div>
+										<div class="label">
+											<span class="percent">60%</span>
+											<a href="#__construct">__construct</a>
+										</div>
+									</div>
+								
+							</li>
+						
+							<li>
+								
+								
+									<div class="bar">
+										<div class="background"></div>
+										<div class="graph" style="width: 100%"></div>
+										<div class="label">
+											<span class="percent">100%</span>
+											<a href="#init">init</a>
+										</div>
+									</div>
+								
+							</li>
+						
+					
+				</ul>
+				<h3>Source</h3>
+				<table cellpadding="0" cellspacing="0" class="source">
+					<tr><th class="number">Line</th><th>Code</th></tr>
+					<tr><td class="number"><a name="attachBehaviorInternal"></a>1</td><td><pre>&lt;?php
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>2</td><td><pre>/**
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>3</td><td><pre> * @link http://www.yiiframework.com/
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>4</td><td><pre> * @copyright Copyright (c) 2008 Yii Software LLC
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>5</td><td><pre> * @license http://www.yiiframework.com/license/
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>6</td><td><pre> */
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>7</td><td><pre>
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>8</td><td><pre>namespace yii\base;
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>9</td><td><pre>
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>10</td><td><pre>use Yii;
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>11</td><td><pre>
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>12</td><td><pre>/**
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>13</td><td><pre> * Object is the base class that implements the *property* feature.
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>14</td><td><pre> *
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>15</td><td><pre> * A property is defined by a getter method (e.g. `getLabel`), and/or a setter method (e.g. `setLabel`). For example,
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>16</td><td><pre> * the following getter and setter methods define a property named `label`:
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>17</td><td><pre> *
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>18</td><td><pre> * ```php
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>19</td><td><pre> * private $_label;
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>20</td><td><pre> *
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>21</td><td><pre> * public function getLabel()
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>22</td><td><pre> * {
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>23</td><td><pre> *     return $this-&gt;_label;
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>24</td><td><pre> * }
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>25</td><td><pre> *
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>26</td><td><pre> * public function setLabel($value)
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>27</td><td><pre> * {
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>28</td><td><pre> *     $this-&gt;_label = $value;
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>29</td><td><pre> * }
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>30</td><td><pre> * ```
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>31</td><td><pre> *
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>32</td><td><pre> * Property names are *case-insensitive*.
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>33</td><td><pre> *
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>34</td><td><pre> * A property can be accessed like a member variable of an object. Reading or writing a property will cause the invocation
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>35</td><td><pre> * of the corresponding getter or setter method. For example,
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>36</td><td><pre> *
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>37</td><td><pre> * ```php
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>38</td><td><pre> * // equivalent to $label = $object-&gt;getLabel();
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>39</td><td><pre> * $label = $object-&gt;label;
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>40</td><td><pre> * // equivalent to $object-&gt;setLabel(&#039;abc&#039;);
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>41</td><td><pre> * $object-&gt;label = &#039;abc&#039;;
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>42</td><td><pre> * ```
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>43</td><td><pre> *
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>44</td><td><pre> * If a property has only a getter method and has no setter method, it is considered as *read-only*. In this case, trying
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>45</td><td><pre> * to modify the property value will cause an exception.
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>46</td><td><pre> *
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>47</td><td><pre> * One can call [[hasProperty()]], [[canGetProperty()]] and/or [[canSetProperty()]] to check the existence of a property.
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>48</td><td><pre> *
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>49</td><td><pre> * Besides the property feature, Object also introduces an important object initialization life cycle. In particular,
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>50</td><td><pre> * creating an new instance of Object or its derived class will involve the following life cycles sequentially:
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>51</td><td><pre> *
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>52</td><td><pre> * 1. the class constructor is invoked;
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>53</td><td><pre> * 2. object properties are initialized according to the given configuration;
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>54</td><td><pre> * 3. the `init()` method is invoked.
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>55</td><td><pre> *
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>56</td><td><pre> * In the above, both Step 2 and 3 occur at the end of the class constructor. It is recommended that
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>57</td><td><pre> * you perform object initialization in the `init()` method because at that stage, the object configuration
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>58</td><td><pre> * is already applied.
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>59</td><td><pre> *
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>60</td><td><pre> * In order to ensure the above life cycles, if a child class of Object needs to override the constructor,
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>61</td><td><pre> * it should be done like the following:
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>62</td><td><pre> *
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>63</td><td><pre> * ```php
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>64</td><td><pre> * public function __construct($param1, $param2, ..., $config = [])
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>65</td><td><pre> * {
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>66</td><td><pre> *     ...
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>67</td><td><pre> *     parent::__construct($config);
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>68</td><td><pre> * }
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>69</td><td><pre> * ```
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>70</td><td><pre> *
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>71</td><td><pre> * That is, a `$config` parameter (defaults to `[]`) should be declared as the last parameter
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>72</td><td><pre> * of the constructor, and the parent implementation should be called at the end of the constructor.
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>73</td><td><pre> *
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>74</td><td><pre> * @author Qiang Xue &lt;qiang.xue@gmail.com&gt;
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>75</td><td><pre> * @since 2.0
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>76</td><td><pre> */
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>77</td><td><pre>class Object implements Configurable
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>78</td><td><pre>{
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>79</td><td><pre>    /**
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>80</td><td><pre>     * Returns the fully qualified name of this class.
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>81</td><td><pre>     * @return string the fully qualified name of this class.
+</pre></td></tr><tr><td class="number"><a name="attachBehaviorInternal"></a>82</td><td><pre>     */
+</pre></td></tr><tr><td class="number"><a name="className"></a>83</td><td><pre>    public static function className()
+</pre></td></tr><tr><td class="number"><a name="className"></a>84</td><td><pre>    {
+</pre></td></tr><tr class="notCovered"><td class="number">85</td><td><pre>        return get_called_class();
+</pre></td></tr><tr><td class="number"><a name="className"></a>86</td><td><pre>    }
+</pre></td></tr><tr><td class="number"><a name="className"></a>87</td><td><pre>
+</pre></td></tr><tr><td class="number"><a name="className"></a>88</td><td><pre>    /**
+</pre></td></tr><tr><td class="number"><a name="className"></a>89</td><td><pre>     * Constructor.
+</pre></td></tr><tr><td class="number"><a name="className"></a>90</td><td><pre>     * The default implementation does two things:
+</pre></td></tr><tr><td class="number"><a name="className"></a>91</td><td><pre>     *
+</pre></td></tr><tr><td class="number"><a name="className"></a>92</td><td><pre>     * - Initializes the object with the given configuration `$config`.
+</pre></td></tr><tr><td class="number"><a name="className"></a>93</td><td><pre>     * - Call [[init()]].
+</pre></td></tr><tr><td class="number"><a name="className"></a>94</td><td><pre>     *
+</pre></td></tr><tr><td class="number"><a name="className"></a>95</td><td><pre>     * If this method is overridden in a child class, it is recommended that
+</pre></td></tr><tr><td class="number"><a name="className"></a>96</td><td><pre>     *
+</pre></td></tr><tr><td class="number"><a name="className"></a>97</td><td><pre>     * - the last parameter of the constructor is a configuration array, like `$config` here.
+</pre></td></tr><tr><td class="number"><a name="className"></a>98</td><td><pre>     * - call the parent implementation at the end of the constructor.
+</pre></td></tr><tr><td class="number"><a name="className"></a>99</td><td><pre>     *
+</pre></td></tr><tr><td class="number"><a name="className"></a>100</td><td><pre>     * @param array $config name-value pairs that will be used to initialize the object properties
+</pre></td></tr><tr><td class="number"><a name="className"></a>101</td><td><pre>     */
+</pre></td></tr><tr><td class="number"><a name="__construct"></a>102</td><td><pre>    public function __construct($config = [])
+</pre></td></tr><tr><td class="number"><a name="__construct"></a>103</td><td><pre>    {
+</pre></td></tr><tr class="covered"><td class="number">104</td><td><pre>        if (!empty($config)) {
+</pre></td></tr><tr class="notCovered"><td class="number">105</td><td><pre>            Yii::configure($this, $config);
+</pre></td></tr><tr class="notCovered"><td class="number">106</td><td><pre>        }
+</pre></td></tr><tr class="covered"><td class="number">107</td><td><pre>        $this-&gt;init();
+</pre></td></tr><tr class="covered"><td class="number">108</td><td><pre>    }
+</pre></td></tr><tr><td class="number"><a name="__construct"></a>109</td><td><pre>
+</pre></td></tr><tr><td class="number"><a name="__construct"></a>110</td><td><pre>    /**
+</pre></td></tr><tr><td class="number"><a name="__construct"></a>111</td><td><pre>     * Initializes the object.
+</pre></td></tr><tr><td class="number"><a name="__construct"></a>112</td><td><pre>     * This method is invoked at the end of the constructor after the object is initialized with the
+</pre></td></tr><tr><td class="number"><a name="__construct"></a>113</td><td><pre>     * given configuration.
+</pre></td></tr><tr><td class="number"><a name="__construct"></a>114</td><td><pre>     */
+</pre></td></tr><tr><td class="number"><a name="init"></a>115</td><td><pre>    public function init()
+</pre></td></tr><tr><td class="number"><a name="init"></a>116</td><td><pre>    {
+</pre></td></tr><tr class="covered"><td class="number">117</td><td><pre>    }
+</pre></td></tr><tr><td class="number"><a name="init"></a>118</td><td><pre>
+</pre></td></tr><tr><td class="number"><a name="init"></a>119</td><td><pre>    /**
+</pre></td></tr><tr><td class="number"><a name="init"></a>120</td><td><pre>     * Returns the value of an object property.
+</pre></td></tr><tr><td class="number"><a name="init"></a>121</td><td><pre>     *
+</pre></td></tr><tr><td class="number"><a name="init"></a>122</td><td><pre>     * Do not call this method directly as it is a PHP magic method that
+</pre></td></tr><tr><td class="number"><a name="init"></a>123</td><td><pre>     * will be implicitly called when executing `$value = $object-&gt;property;`.
+</pre></td></tr><tr><td class="number"><a name="init"></a>124</td><td><pre>     * @param string $name the property name
+</pre></td></tr><tr><td class="number"><a name="init"></a>125</td><td><pre>     * @return mixed the property value
+</pre></td></tr><tr><td class="number"><a name="init"></a>126</td><td><pre>     * @throws UnknownPropertyException if the property is not defined
+</pre></td></tr><tr><td class="number"><a name="init"></a>127</td><td><pre>     * @throws InvalidCallException if the property is write-only
+</pre></td></tr><tr><td class="number"><a name="init"></a>128</td><td><pre>     * @see __set()
+</pre></td></tr><tr><td class="number"><a name="init"></a>129</td><td><pre>     */
+</pre></td></tr><tr><td class="number"><a name="__get"></a>130</td><td><pre>    public function __get($name)
+</pre></td></tr><tr><td class="number"><a name="__get"></a>131</td><td><pre>    {
+</pre></td></tr><tr><td class="number"><a name="__get"></a>132</td><td><pre>        $getter = &#039;get&#039; . $name;
+</pre></td></tr><tr><td class="number"><a name="__get"></a>133</td><td><pre>        if (method_exists($this, $getter)) {
+</pre></td></tr><tr><td class="number"><a name="__get"></a>134</td><td><pre>            return $this-&gt;$getter();
+</pre></td></tr><tr><td class="number"><a name="__get"></a>135</td><td><pre>        } elseif (method_exists($this, &#039;set&#039; . $name)) {
+</pre></td></tr><tr><td class="number"><a name="__get"></a>136</td><td><pre>            throw new InvalidCallException(&#039;Getting write-only property: &#039; . get_class($this) . &#039;::&#039; . $name);
+</pre></td></tr><tr><td class="number"><a name="__get"></a>137</td><td><pre>        } else {
+</pre></td></tr><tr><td class="number"><a name="__get"></a>138</td><td><pre>            throw new UnknownPropertyException(&#039;Getting unknown property: &#039; . get_class($this) . &#039;::&#039; . $name);
+</pre></td></tr><tr><td class="number"><a name="__get"></a>139</td><td><pre>        }
+</pre></td></tr><tr><td class="number"><a name="__get"></a>140</td><td><pre>    }
+</pre></td></tr><tr><td class="number"><a name="__get"></a>141</td><td><pre>
+</pre></td></tr><tr><td class="number"><a name="__get"></a>142</td><td><pre>    /**
+</pre></td></tr><tr><td class="number"><a name="__get"></a>143</td><td><pre>     * Sets value of an object property.
+</pre></td></tr><tr><td class="number"><a name="__get"></a>144</td><td><pre>     *
+</pre></td></tr><tr><td class="number"><a name="__get"></a>145</td><td><pre>     * Do not call this method directly as it is a PHP magic method that
+</pre></td></tr><tr><td class="number"><a name="__get"></a>146</td><td><pre>     * will be implicitly called when executing `$object-&gt;property = $value;`.
+</pre></td></tr><tr><td class="number"><a name="__get"></a>147</td><td><pre>     * @param string $name the property name or the event name
+</pre></td></tr><tr><td class="number"><a name="__get"></a>148</td><td><pre>     * @param mixed $value the property value
+</pre></td></tr><tr><td class="number"><a name="__get"></a>149</td><td><pre>     * @throws UnknownPropertyException if the property is not defined
+</pre></td></tr><tr><td class="number"><a name="__get"></a>150</td><td><pre>     * @throws InvalidCallException if the property is read-only
+</pre></td></tr><tr><td class="number"><a name="__get"></a>151</td><td><pre>     * @see __get()
+</pre></td></tr><tr><td class="number"><a name="__get"></a>152</td><td><pre>     */
+</pre></td></tr><tr><td class="number"><a name="__set"></a>153</td><td><pre>    public function __set($name, $value)
+</pre></td></tr><tr><td class="number"><a name="__set"></a>154</td><td><pre>    {
+</pre></td></tr><tr><td class="number"><a name="__set"></a>155</td><td><pre>        $setter = &#039;set&#039; . $name;
+</pre></td></tr><tr><td class="number"><a name="__set"></a>156</td><td><pre>        if (method_exists($this, $setter)) {
+</pre></td></tr><tr><td class="number"><a name="__set"></a>157</td><td><pre>            $this-&gt;$setter($value);
+</pre></td></tr><tr><td class="number"><a name="__set"></a>158</td><td><pre>        } elseif (method_exists($this, &#039;get&#039; . $name)) {
+</pre></td></tr><tr><td class="number"><a name="__set"></a>159</td><td><pre>            throw new InvalidCallException(&#039;Setting read-only property: &#039; . get_class($this) . &#039;::&#039; . $name);
+</pre></td></tr><tr><td class="number"><a name="__set"></a>160</td><td><pre>        } else {
+</pre></td></tr><tr><td class="number"><a name="__set"></a>161</td><td><pre>            throw new UnknownPropertyException(&#039;Setting unknown property: &#039; . get_class($this) . &#039;::&#039; . $name);
+</pre></td></tr><tr><td class="number"><a name="__set"></a>162</td><td><pre>        }
+</pre></td></tr><tr><td class="number"><a name="__set"></a>163</td><td><pre>    }
+</pre></td></tr><tr><td class="number"><a name="__set"></a>164</td><td><pre>
+</pre></td></tr><tr><td class="number"><a name="__set"></a>165</td><td><pre>    /**
+</pre></td></tr><tr><td class="number"><a name="__set"></a>166</td><td><pre>     * Checks if a property is set, i.e. defined and not null.
+</pre></td></tr><tr><td class="number"><a name="__set"></a>167</td><td><pre>     *
+</pre></td></tr><tr><td class="number"><a name="__set"></a>168</td><td><pre>     * Do not call this method directly as it is a PHP magic method that
+</pre></td></tr><tr><td class="number"><a name="__set"></a>169</td><td><pre>     * will be implicitly called when executing `isset($object-&gt;property)`.
+</pre></td></tr><tr><td class="number"><a name="__set"></a>170</td><td><pre>     *
+</pre></td></tr><tr><td class="number"><a name="__set"></a>171</td><td><pre>     * Note that if the property is not defined, false will be returned.
+</pre></td></tr><tr><td class="number"><a name="__set"></a>172</td><td><pre>     * @param string $name the property name or the event name
+</pre></td></tr><tr><td class="number"><a name="__set"></a>173</td><td><pre>     * @return boolean whether the named property is set (not null).
+</pre></td></tr><tr><td class="number"><a name="__set"></a>174</td><td><pre>     * @see http://php.net/manual/en/function.isset.php
+</pre></td></tr><tr><td class="number"><a name="__set"></a>175</td><td><pre>     */
+</pre></td></tr><tr><td class="number"><a name="__isset"></a>176</td><td><pre>    public function __isset($name)
+</pre></td></tr><tr><td class="number"><a name="__isset"></a>177</td><td><pre>    {
+</pre></td></tr><tr><td class="number"><a name="__isset"></a>178</td><td><pre>        $getter = &#039;get&#039; . $name;
+</pre></td></tr><tr><td class="number"><a name="__isset"></a>179</td><td><pre>        if (method_exists($this, $getter)) {
+</pre></td></tr><tr><td class="number"><a name="__isset"></a>180</td><td><pre>            return $this-&gt;$getter() !== null;
+</pre></td></tr><tr><td class="number"><a name="__isset"></a>181</td><td><pre>        } else {
+</pre></td></tr><tr><td class="number"><a name="__isset"></a>182</td><td><pre>            return false;
+</pre></td></tr><tr><td class="number"><a name="__isset"></a>183</td><td><pre>        }
+</pre></td></tr><tr><td class="number"><a name="__isset"></a>184</td><td><pre>    }
+</pre></td></tr><tr><td class="number"><a name="__isset"></a>185</td><td><pre>
+</pre></td></tr><tr><td class="number"><a name="__isset"></a>186</td><td><pre>    /**
+</pre></td></tr><tr><td class="number"><a name="__isset"></a>187</td><td><pre>     * Sets an object property to null.
+</pre></td></tr><tr><td class="number"><a name="__isset"></a>188</td><td><pre>     *
+</pre></td></tr><tr><td class="number"><a name="__isset"></a>189</td><td><pre>     * Do not call this method directly as it is a PHP magic method that
+</pre></td></tr><tr><td class="number"><a name="__isset"></a>190</td><td><pre>     * will be implicitly called when executing `unset($object-&gt;property)`.
+</pre></td></tr><tr><td class="number"><a name="__isset"></a>191</td><td><pre>     *
+</pre></td></tr><tr><td class="number"><a name="__isset"></a>192</td><td><pre>     * Note that if the property is not defined, this method will do nothing.
+</pre></td></tr><tr><td class="number"><a name="__isset"></a>193</td><td><pre>     * If the property is read-only, it will throw an exception.
+</pre></td></tr><tr><td class="number"><a name="__isset"></a>194</td><td><pre>     * @param string $name the property name
+</pre></td></tr><tr><td class="number"><a name="__isset"></a>195</td><td><pre>     * @throws InvalidCallException if the property is read only.
+</pre></td></tr><tr><td class="number"><a name="__isset"></a>196</td><td><pre>     * @see http://php.net/manual/en/function.unset.php
+</pre></td></tr><tr><td class="number"><a name="__isset"></a>197</td><td><pre>     */
+</pre></td></tr><tr><td class="number"><a name="__unset"></a>198</td><td><pre>    public function __unset($name)
+</pre></td></tr><tr><td class="number"><a name="__unset"></a>199</td><td><pre>    {
+</pre></td></tr><tr><td class="number"><a name="__unset"></a>200</td><td><pre>        $setter = &#039;set&#039; . $name;
+</pre></td></tr><tr><td class="number"><a name="__unset"></a>201</td><td><pre>        if (method_exists($this, $setter)) {
+</pre></td></tr><tr><td class="number"><a name="__unset"></a>202</td><td><pre>            $this-&gt;$setter(null);
+</pre></td></tr><tr><td class="number"><a name="__unset"></a>203</td><td><pre>        } elseif (method_exists($this, &#039;get&#039; . $name)) {
+</pre></td></tr><tr><td class="number"><a name="__unset"></a>204</td><td><pre>            throw new InvalidCallException(&#039;Unsetting read-only property: &#039; . get_class($this) . &#039;::&#039; . $name);
+</pre></td></tr><tr><td class="number"><a name="__unset"></a>205</td><td><pre>        }
+</pre></td></tr><tr><td class="number"><a name="__unset"></a>206</td><td><pre>    }
+</pre></td></tr><tr><td class="number"><a name="__unset"></a>207</td><td><pre>
+</pre></td></tr><tr><td class="number"><a name="__unset"></a>208</td><td><pre>    /**
+</pre></td></tr><tr><td class="number"><a name="__unset"></a>209</td><td><pre>     * Calls the named method which is not a class method.
+</pre></td></tr><tr><td class="number"><a name="__unset"></a>210</td><td><pre>     *
+</pre></td></tr><tr><td class="number"><a name="__unset"></a>211</td><td><pre>     * Do not call this method directly as it is a PHP magic method that
+</pre></td></tr><tr><td class="number"><a name="__unset"></a>212</td><td><pre>     * will be implicitly called when an unknown method is being invoked.
+</pre></td></tr><tr><td class="number"><a name="__unset"></a>213</td><td><pre>     * @param string $name the method name
+</pre></td></tr><tr><td class="number"><a name="__unset"></a>214</td><td><pre>     * @param array $params method parameters
+</pre></td></tr><tr><td class="number"><a name="__unset"></a>215</td><td><pre>     * @throws UnknownMethodException when calling unknown method
+</pre></td></tr><tr><td class="number"><a name="__unset"></a>216</td><td><pre>     * @return mixed the method return value
+</pre></td></tr><tr><td class="number"><a name="__unset"></a>217</td><td><pre>     */
+</pre></td></tr><tr><td class="number"><a name="__call"></a>218</td><td><pre>    public function __call($name, $params)
+</pre></td></tr><tr><td class="number"><a name="__call"></a>219</td><td><pre>    {
+</pre></td></tr><tr><td class="number"><a name="__call"></a>220</td><td><pre>        throw new UnknownMethodException(&#039;Calling unknown method: &#039; . get_class($this) . &quot;::$name()&quot;);
+</pre></td></tr><tr><td class="number"><a name="__call"></a>221</td><td><pre>    }
+</pre></td></tr><tr><td class="number"><a name="__call"></a>222</td><td><pre>
+</pre></td></tr><tr><td class="number"><a name="__call"></a>223</td><td><pre>    /**
+</pre></td></tr><tr><td class="number"><a name="__call"></a>224</td><td><pre>     * Returns a value indicating whether a property is defined.
+</pre></td></tr><tr><td class="number"><a name="__call"></a>225</td><td><pre>     * A property is defined if:
+</pre></td></tr><tr><td class="number"><a name="__call"></a>226</td><td><pre>     *
+</pre></td></tr><tr><td class="number"><a name="__call"></a>227</td><td><pre>     * - the class has a getter or setter method associated with the specified name
+</pre></td></tr><tr><td class="number"><a name="__call"></a>228</td><td><pre>     *   (in this case, property name is case-insensitive);
+</pre></td></tr><tr><td class="number"><a name="__call"></a>229</td><td><pre>     * - the class has a member variable with the specified name (when `$checkVars` is true);
+</pre></td></tr><tr><td class="number"><a name="__call"></a>230</td><td><pre>     *
+</pre></td></tr><tr><td class="number"><a name="__call"></a>231</td><td><pre>     * @param string $name the property name
+</pre></td></tr><tr><td class="number"><a name="__call"></a>232</td><td><pre>     * @param boolean $checkVars whether to treat member variables as properties
+</pre></td></tr><tr><td class="number"><a name="__call"></a>233</td><td><pre>     * @return boolean whether the property is defined
+</pre></td></tr><tr><td class="number"><a name="__call"></a>234</td><td><pre>     * @see canGetProperty()
+</pre></td></tr><tr><td class="number"><a name="__call"></a>235</td><td><pre>     * @see canSetProperty()
+</pre></td></tr><tr><td class="number"><a name="__call"></a>236</td><td><pre>     */
+</pre></td></tr><tr><td class="number"><a name="hasProperty"></a>237</td><td><pre>    public function hasProperty($name, $checkVars = true)
+</pre></td></tr><tr><td class="number"><a name="hasProperty"></a>238</td><td><pre>    {
+</pre></td></tr><tr><td class="number"><a name="hasProperty"></a>239</td><td><pre>        return $this-&gt;canGetProperty($name, $checkVars) || $this-&gt;canSetProperty($name, false);
+</pre></td></tr><tr><td class="number"><a name="hasProperty"></a>240</td><td><pre>    }
+</pre></td></tr><tr><td class="number"><a name="hasProperty"></a>241</td><td><pre>
+</pre></td></tr><tr><td class="number"><a name="hasProperty"></a>242</td><td><pre>    /**
+</pre></td></tr><tr><td class="number"><a name="hasProperty"></a>243</td><td><pre>     * Returns a value indicating whether a property can be read.
+</pre></td></tr><tr><td class="number"><a name="hasProperty"></a>244</td><td><pre>     * A property is readable if:
+</pre></td></tr><tr><td class="number"><a name="hasProperty"></a>245</td><td><pre>     *
+</pre></td></tr><tr><td class="number"><a name="hasProperty"></a>246</td><td><pre>     * - the class has a getter method associated with the specified name
+</pre></td></tr><tr><td class="number"><a name="hasProperty"></a>247</td><td><pre>     *   (in this case, property name is case-insensitive);
+</pre></td></tr><tr><td class="number"><a name="hasProperty"></a>248</td><td><pre>     * - the class has a member variable with the specified name (when `$checkVars` is true);
+</pre></td></tr><tr><td class="number"><a name="hasProperty"></a>249</td><td><pre>     *
+</pre></td></tr><tr><td class="number"><a name="hasProperty"></a>250</td><td><pre>     * @param string $name the property name
+</pre></td></tr><tr><td class="number"><a name="hasProperty"></a>251</td><td><pre>     * @param boolean $checkVars whether to treat member variables as properties
+</pre></td></tr><tr><td class="number"><a name="hasProperty"></a>252</td><td><pre>     * @return boolean whether the property can be read
+</pre></td></tr><tr><td class="number"><a name="hasProperty"></a>253</td><td><pre>     * @see canSetProperty()
+</pre></td></tr><tr><td class="number"><a name="hasProperty"></a>254</td><td><pre>     */
+</pre></td></tr><tr><td class="number"><a name="canGetProperty"></a>255</td><td><pre>    public function canGetProperty($name, $checkVars = true)
+</pre></td></tr><tr><td class="number"><a name="canGetProperty"></a>256</td><td><pre>    {
+</pre></td></tr><tr><td class="number"><a name="canGetProperty"></a>257</td><td><pre>        return method_exists($this, &#039;get&#039; . $name) || $checkVars &amp;&amp; property_exists($this, $name);
+</pre></td></tr><tr><td class="number"><a name="canGetProperty"></a>258</td><td><pre>    }
+</pre></td></tr><tr><td class="number"><a name="canGetProperty"></a>259</td><td><pre>
+</pre></td></tr><tr><td class="number"><a name="canGetProperty"></a>260</td><td><pre>    /**
+</pre></td></tr><tr><td class="number"><a name="canGetProperty"></a>261</td><td><pre>     * Returns a value indicating whether a property can be set.
+</pre></td></tr><tr><td class="number"><a name="canGetProperty"></a>262</td><td><pre>     * A property is writable if:
+</pre></td></tr><tr><td class="number"><a name="canGetProperty"></a>263</td><td><pre>     *
+</pre></td></tr><tr><td class="number"><a name="canGetProperty"></a>264</td><td><pre>     * - the class has a setter method associated with the specified name
+</pre></td></tr><tr><td class="number"><a name="canGetProperty"></a>265</td><td><pre>     *   (in this case, property name is case-insensitive);
+</pre></td></tr><tr><td class="number"><a name="canGetProperty"></a>266</td><td><pre>     * - the class has a member variable with the specified name (when `$checkVars` is true);
+</pre></td></tr><tr><td class="number"><a name="canGetProperty"></a>267</td><td><pre>     *
+</pre></td></tr><tr><td class="number"><a name="canGetProperty"></a>268</td><td><pre>     * @param string $name the property name
+</pre></td></tr><tr><td class="number"><a name="canGetProperty"></a>269</td><td><pre>     * @param boolean $checkVars whether to treat member variables as properties
+</pre></td></tr><tr><td class="number"><a name="canGetProperty"></a>270</td><td><pre>     * @return boolean whether the property can be written
+</pre></td></tr><tr><td class="number"><a name="canGetProperty"></a>271</td><td><pre>     * @see canGetProperty()
+</pre></td></tr><tr><td class="number"><a name="canGetProperty"></a>272</td><td><pre>     */
+</pre></td></tr><tr><td class="number"><a name="canSetProperty"></a>273</td><td><pre>    public function canSetProperty($name, $checkVars = true)
+</pre></td></tr><tr><td class="number"><a name="canSetProperty"></a>274</td><td><pre>    {
+</pre></td></tr><tr><td class="number"><a name="canSetProperty"></a>275</td><td><pre>        return method_exists($this, &#039;set&#039; . $name) || $checkVars &amp;&amp; property_exists($this, $name);
+</pre></td></tr><tr><td class="number"><a name="canSetProperty"></a>276</td><td><pre>    }
+</pre></td></tr><tr><td class="number"><a name="canSetProperty"></a>277</td><td><pre>
+</pre></td></tr><tr><td class="number"><a name="canSetProperty"></a>278</td><td><pre>    /**
+</pre></td></tr><tr><td class="number"><a name="canSetProperty"></a>279</td><td><pre>     * Returns a value indicating whether a method is defined.
+</pre></td></tr><tr><td class="number"><a name="canSetProperty"></a>280</td><td><pre>     *
+</pre></td></tr><tr><td class="number"><a name="canSetProperty"></a>281</td><td><pre>     * The default implementation is a call to php function `method_exists()`.
+</pre></td></tr><tr><td class="number"><a name="canSetProperty"></a>282</td><td><pre>     * You may override this method when you implemented the php magic method `__call()`.
+</pre></td></tr><tr><td class="number"><a name="canSetProperty"></a>283</td><td><pre>     * @param string $name the method name
+</pre></td></tr><tr><td class="number"><a name="canSetProperty"></a>284</td><td><pre>     * @return boolean whether the method is defined
+</pre></td></tr><tr><td class="number"><a name="canSetProperty"></a>285</td><td><pre>     */
+</pre></td></tr><tr><td class="number"><a name="hasMethod"></a>286</td><td><pre>    public function hasMethod($name)
+</pre></td></tr><tr><td class="number"><a name="hasMethod"></a>287</td><td><pre>    {
+</pre></td></tr><tr><td class="number"><a name="hasMethod"></a>288</td><td><pre>        return method_exists($this, $name);
+</pre></td></tr><tr><td class="number"><a name="hasMethod"></a>289</td><td><pre>    }
+</pre></td></tr><tr><td class="number"><a name="hasMethod"></a>290</td><td><pre>}
+</pre></td></tr>
+				</table>
+			</div>
+		</div>
+		<div id="footer">
+			<p>Code coverage report powered by <a href="http://atoum.org">atoum</a></p>
+		</div>
+	</body>
+</html>

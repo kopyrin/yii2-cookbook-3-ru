@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS `blog_post`;
+CREATE TABLE IF NOT EXISTS `blog_post` (
+   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+   `author_id` INT(10) UNSIGNED DEFAULT NULL,
+   `updater_id` INT(10) UNSIGNED DEFAULT NULL,
+   `title` VARCHAR(255) NOT NULL,
+   `text` TEXT NOT NULL,
+   PRIMARY KEY  (`id`)
+);

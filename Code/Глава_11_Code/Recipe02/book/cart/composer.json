@@ -1,0 +1,22 @@
+{
+    "name": "book/cart",
+    "type": "yii2-extension",
+    "require": {
+        "yiisoft/yii2": "~2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "book\\cart\\": "src/",
+            "book\\cart\\tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    }
+}

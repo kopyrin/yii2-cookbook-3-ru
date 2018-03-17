@@ -1,0 +1,29 @@
+2016-03-06 09:27:09 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: username' in /controllers/LogController.php:11
+Stack trace:
+#0 /yii2/base/InlineAction.php(55): ::call_user_func_array()
+#1 /yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#2 /yii2/base/Module.php(455): yii\base\Controller->runAction()
+#3 /yii2/web/Application.php(84): yii\base\Module->runAction()
+#4 /yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#5 /web/index.php(12): yii\base\Application->run()
+#6 {main}
+2016-03-06 09:27:09 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'log/index'
+]
+
+$_COOKIE = [
+    '_csrf' => 'ca689043348e...a69ea:2:{i:0;s:...\"DSS...KJ\";}'
+    'PHPSESSID' => '30584oqhat4ek8b0hrqsapsbf4'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => 'r=log/index'
+    ...
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1459934829.3067
+    'REQUEST_TIME' => 1459934829
+]
+
