@@ -2,6 +2,17 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/037 Глава 1 Основы .md" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/038-042 Установка фреймворка.md" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/075 Глава 2. Маршрутизация, контроллеры и представления.md" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/124 Глава 3. ActiveRecord, модели и базы данных.md" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/167 Глава 4. Формы.md" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/211 Глава 5 Безопасность.md" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/251 Глава 6 Веб-Службы RESTful.md" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/270 Глава 7 Официальные Расширения.md" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/313 Глава 8 Расширение Yii.md" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/367 Глава 9. Настройка производительности.md" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/408 Глава 10 Развертывание.md" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/435 Глава 11 Тестирование.md" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/489 Глава 12 Отладка, ведение журнала и обработка ошибок.md" charset="windows-1251" />
   </component>
 </project>
