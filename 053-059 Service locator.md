@@ -147,7 +147,7 @@ public function rules()
 }
 ```
 5 Создаем представление  views/cart/index.php :
-```html
+```php
 <?php
 use yii\grid\ActionColumn; 
 use yii\grid\GridView; 
@@ -162,16 +162,16 @@ $this->params['breadcrumbs'][] = $this->title;
 <h1><?= Html::encode($this->title) ?></h1>
 <p><?= Html::a('Add Item', ['add'], ['class' => 'btn btn-success']) ?></p>
 <?= GridView::widget([
-'dataProvider' => $dataProvider,
-'columns' => [
-     ['class' => SerialColumn::className()],
-     'id:text:Product ID',
-     'amount:text:Amount',
-     [
-'class' => ActionColumn::className(),
-'template' => '{delete}',
-     ]
-],
+    'dataProvider' => $dataProvider,
+    'columns' => [
+         ['class' => SerialColumn::className()],
+         'id:text:Product ID',
+         'amount:text:Amount',
+         [
+          'class' => ActionColumn::className(),
+          'template' => '{delete}',
+         ]
+     ],
 ]) ?>
 </div>
 ```
@@ -228,7 +228,7 @@ class ShoppingCart extends Component {
    ],
 ]
 ```
- Сейчас мы можем получить экземпляр компонента двумя способами:
+Сейчас мы можем получить экземпляр компонента двумя способами:
 ```php
 $cart = Yii::$app->cart;
 $cart = Yii::$app->get('cart');
